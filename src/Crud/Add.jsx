@@ -11,11 +11,8 @@ const [array,arrayData]=useState([])
 const onsubmit =(event) =>{
     event.preventDefault()
     console.log(form);
-
-    arrayData((olddata)=>{
-        return [...olddata,form]
-    })
-    // arrayData([...array,form])
+        
+    arrayData([...array,form])
 
     console.log(array,'hiiiiiiii');
 }
