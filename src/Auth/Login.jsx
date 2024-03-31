@@ -11,7 +11,7 @@ const Login = ()=>{
         <br></br>
         <input type="text" placeholder="password" />
     <br></br>
-        <button>Login</button>
+        <button >Login</button>
         
         </>
     )
