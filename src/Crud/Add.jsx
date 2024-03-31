@@ -6,24 +6,30 @@ const [form,setform]=useState({
 email:'',
 password:''
 })
+const [array,arrayData]=useState([])
 
 const onsubmit =(event) =>{
     event.preventDefault()
+    console.log(form);
+
+    arrayData((olddata)=>{
+        return [...olddata,form]
+    })
+    // arrayData([...array,form])
+
+    console.log(array,'hiiiiiiii');
 }
 
-const eventForm =(e)=>{
-    console.log(e);
-}
  return(
     <>
     
     <h1>Form</h1>
 <form action="" onSubmit={onsubmit}>
 <label>email</label>
-<input placeholder="email" value={form.email}  onChange={ (e)=> eventForm()} />
+<input placeholder="email" value={form.email}  onChange={ (e)=> setform({...form,email: e.target.value})} />
 
 <label>Password</label>
-<input placeholder="password" value={form.password} onChange={ (e)=> eventForm()} />
+<input placeholder="password" value={form.password} onChange={ (e)=> setform({...form,password: e.target.value})} />
 
 <button type="submit">Sign Up</button>
 </form>
