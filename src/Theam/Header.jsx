@@ -10,7 +10,7 @@ const gotoabout1 =()=>{
     navigat('/contact')
 }
 const gotoabout2 =()=>{
-    navigat('/list')
+    navigat('/add')
 }
 const gotoabout0 =()=>{
     navigat('/')

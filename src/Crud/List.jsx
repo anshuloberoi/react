@@ -3,8 +3,7 @@ import React from "react";
 const List =()=>{
  return(
     <>
-    
-    <p>Hello List</p>
+    <p>This is the list</p>
     </>
  )   
 }
