@@ -12,7 +12,9 @@ const onsubmit =(event) =>{
     event.preventDefault()
     console.log(form);
         
-    arrayData([...array,form])
+    arrayData((olddata)=>{
+        return [...olddata,form]
+    })
 
     console.log(array,'hiiiiiiii');
 }
@@ -30,7 +32,11 @@ const onsubmit =(event) =>{
 
 <button type="submit">Sign Up</button>
 </form>
-    <List></List>
+
+<h1>Data show</h1>
+
+
+    <List data={array}></List>
     </>
  )   
 }
